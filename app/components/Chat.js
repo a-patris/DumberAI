@@ -72,7 +72,7 @@ const Chat = ({ character, onValidation }) => {
                     <div
                         key={index}
                         className={`${message.isUser ? 'bg-gray-300 text-gray-800' : 'bg-gray-500 text-white'
-                            } p-2  mb-2`}
+                            } p-2 mb-2 rounded-lg`}
                     >
                         {message.content}
                     </div>
@@ -81,7 +81,7 @@ const Chat = ({ character, onValidation }) => {
             <input
                 type="text"
                 placeholder="Entrez votre message..."
-                className="w-full p-4 border border-grey-500 text-lg mt-4"
+                className="w-full p-4 border border-grey-500 text-lg mt-4 rounded-lg"
                 onKeyPress={(e) => {
                     if (e.key === 'Enter') {
                         handleSendMessage(e.target.value);

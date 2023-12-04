@@ -11,27 +11,28 @@ const ChatPage = () => {
     };
 
     return (
-        <div className="container max-w-full h-screen flex justify-between flex-col text-center">
-            <div className="mx-20 my-10">
+        <div className="container max-w-full h-screen flex flex-col text-center">
+            <div className="mx-4 md:mx-20 my-4 md:my-10">
                 <div className='flex flex-row items-center'>
                     <button
                         onClick={handleReturn}
-                        className="bg-transparent text-black px-6 "
+                        className="bg-transparent text-black px-4 md:px-6"
                     >
                         <span className="mr-2">&#8592;</span>
                     </button>
-                    <h1 className="text-4xl font-bold mb-4">
+                    <h1 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4">
                         Bienvenue dans le chat IA, le plus important de votre formation
                     </h1>
                 </div>
                 {character && (
-                    <div className="flex justify-end mb-4">
-                        <img src={`/assets/${character}.png`} alt={character} className="w-20 h-20" />
+                    <div className="flex justify-center md:justify-end mb-2 md:mb-4">
+                        <img src={`/assets/${character}.png`} alt={character} className="w-16 h-16 md:w-20 md:h-20" />
                     </div>
                 )}
             </div>
             <Chat character={character} />
         </div>
+
     );
 };
 

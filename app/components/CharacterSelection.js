@@ -11,7 +11,6 @@ export const characters = [
     { id: 'bob', name: 'Silent Bob', image: '/assets/bob.png', },
 
 ];
-
 const CharacterSelection = ({ onSelectCharacter, onValidation }) => {
     const [selectedCharacter, setSelectedCharacter] = useState(null);
 
@@ -23,30 +22,28 @@ const CharacterSelection = ({ onSelectCharacter, onValidation }) => {
     const handleValidation = () => {
         onValidation(selectedCharacter);
         const selectedCharacterObject = characters.find((character) => character.id === selectedCharacter);
-
     };
 
     return (
-        <div className="flex space-x-4 justify-center items-center flex-col">
-            <div className="flex space-x-4 mb-4">
+        <div className="flex flex-col items-center">
+            <div className="flex flex-wrap justify-center space-x-4 mb-4">
                 {characters.map((character) => (
                     <button
                         key={character.id}
-                        className={`${selectedCharacter === character.id ? 'bg-blue-500 text-white' : 'bg-gray-300'
-                            } px-4 py-2 rounded focus:outline-none flex flex-col items-center`}
+                        className={`bg-gray-300 hover:bg-blue-500 hover:text-white px-4 py-2 rounded focus:outline-none flex flex-col items-center mb-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6`}
                         onClick={() => handleSelectCharacter(character.id)}
                     >
                         <img
                             src={character.image}
                             alt={character.name}
-                            className="w-20 h-20 mb-2"
+                            className="w-12 h-20 object-cover mb-2 sm:h-20"
                         />
                         {character.name}
                     </button>
                 ))}
             </div>
             <button
-                className="bg-green-500 text-white px-4 py-2 rounded"
+                className="bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded cursor-pointer"
                 onClick={handleValidation}
                 disabled={!selectedCharacter}
             >
