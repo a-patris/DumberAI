@@ -5,7 +5,7 @@ function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Next.js App</title>
+        <title>NDumber AI, the new ChatGPT for "La Capsule" students</title>
       </Head>
       <Component {...pageProps} />
     </>
