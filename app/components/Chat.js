@@ -11,6 +11,7 @@ const getRandomResponse = (character) => {
         ],
         murloc: ['Glllglllgl!', 'Mrglglglg!', 'Mrrglllgl!'],
         timmy: ['Timmy!', 'TIMMY!', 'Timmyyyyyyy!!!!'],
+        r2d2: ['Beep boop beep!', 'Bleep bloop!', 'Bleeep beeep boop!'],
     };
 
     const responses = responsesByCharacter[character] || [];
@@ -54,7 +55,11 @@ const Chat = ({ character }) => {
                     </div>
                 )}
                 {messages.map((message, index) => (
-                    <div key={index} className={message.isUser ? 'user-message' : 'chewbacca-message'}>
+                    <div
+                        key={index}
+                        className={`${message.isUser ? 'bg-gray-300 text-gray-800' : 'bg-gray-500 text-white'
+                            } p-2  mb-2`}
+                    >
                         {message.content}
                     </div>
                 ))}
@@ -62,6 +67,7 @@ const Chat = ({ character }) => {
             <input
                 type="text"
                 placeholder="Entrez votre message..."
+                className="w-full p-4 border border-grey-500 text-lg mt-4"
                 onKeyPress={(e) => {
                     if (e.key === 'Enter') {
                         handleSendMessage(e.target.value);
