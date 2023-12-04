@@ -6,6 +6,8 @@ function App({ Component, pageProps }) {
     <>
       <Head>
         <title>Dumber AI, the new ChatGPT for all students</title>
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BGSWBMQ"
+          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </Head>
       <Component {...pageProps} />
     </>
