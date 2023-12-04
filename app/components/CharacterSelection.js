@@ -30,7 +30,10 @@ const CharacterSelection = ({ onSelectCharacter, onValidation }) => {
                 {characters.map((character) => (
                     <button
                         key={character.id}
-                        className={`bg-gray-300 hover:bg-blue-500 hover:text-white px-4 py-2 rounded focus:outline-none flex flex-col items-center mb-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6`}
+                        className={`${selectedCharacter === character.id
+                                ? 'bg-blue-500 text-white'
+                                : 'bg-gray-300 hover:bg-blue-500 hover:text-white'
+                            } px-4 py-2 rounded focus:outline-none flex flex-col items-center mb-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6`}
                         onClick={() => handleSelectCharacter(character.id)}
                     >
                         <img

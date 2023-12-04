@@ -5,7 +5,7 @@ function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>NDumber AI, the new ChatGPT for "La Capsule" students</title>
+        <title>Dumber AI, the new ChatGPT for all students</title>
       </Head>
       <Component {...pageProps} />
     </>
