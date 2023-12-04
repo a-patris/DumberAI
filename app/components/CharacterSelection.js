@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 export const characters = [
-    { id: 'groot', name: 'Groot', image: '/assets/Groot.png' },
-    { id: 'chewbacca', name: 'Chewbacca', image: '/assets/Chewy.png' },
-    { id: 'murloc', name: 'Murloc', image: '/assets/Murloc.png' },
-    { id: 'timmy', name: 'Timmy', image: '/assets/Timmy.png' },
-    { id: 'r2d2', name: 'R2-D2', image: '/assets/R2D2.png' },
+    { id: 'groot', name: 'Groot', image: '/assets/groot.png' },
+    { id: 'chewbacca', name: 'Chewbacca', image: '/assets/chewbacca.png' },
+    { id: 'murloc', name: 'Murloc', image: '/assets/murloc.png' },
+    { id: 'timmy', name: 'Timmy', image: '/assets/timmy.png' },
+    { id: 'r2d2', name: 'R2-D2', image: '/assets/r2d2.png' },
 ];
 
 const CharacterSelection = ({ onSelectCharacter, onValidation }) => {
