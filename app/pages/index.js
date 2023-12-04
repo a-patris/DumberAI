@@ -9,14 +9,14 @@ const Home = () => {
   };
 
   return (
-    <div className="container mx-auto my-8 text-center">
+    <div className="container mx-auto  my-8 text-center">
       <h1 className="text-4xl font-bold mb-4">Sélectionnez votre personnage :</h1>
       <CharacterSelection
         selectedCharacter={selectedCharacter}
         onSelectCharacter={handleSelectCharacter}
       />
       {selectedCharacter && (
-        <p className="mt-4">Personnage sélectionné : {selectedCharacter}</p>
+        <p className="mt-4 ">Personnage sélectionné :<span className='text-slate-900 font-bold'> {selectedCharacter}</span></p>
       )}
     </div>
   );
