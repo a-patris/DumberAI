@@ -13,7 +13,8 @@ const getRandomResponse = (character) => {
         timmy: ['Timmy!', 'TIMMY!', 'Timmyyyyyyy!!!!'],
         r2d2: ['Beep boop beep!', 'Bleep bloop!', 'Bleeep beeep boop!'],
         pikachu: ['Pikachu!', 'Pika Pika', 'Piiiii-Kaaaaaa-Chuuuuuuu !!!!'],
-        leonidas: ['This is SPARTAAAAAA !', 'This is Sparta!', 'This is SPAAAAARTAAAAA']
+        leonidas: ['This is SPARTAAAAAA !', 'This is Sparta!', 'This is SPAAAAARTAAAAA'],
+        bob: ['🤦🏻‍♂️', "¯\\_(ツ)_/¯ ", "😶"],
     };
 
     const audioByCharacter = {
