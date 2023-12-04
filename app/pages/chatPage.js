@@ -11,8 +11,8 @@ const ChatPage = () => {
     };
 
     return (
-        <div className="container max-w-full h-screen flex flex-col text-center">
-            <div className="mx-4 md:mx-20 my-4 md:my-10">
+        <div className="container max-w-full h-screen flex flex-col text-center relative">
+            <div className="mx-4 md:mx-20 my-4 md:my-10 flex-grow">
                 <div className='flex flex-row items-center'>
                     <button
                         onClick={handleReturn}
@@ -30,9 +30,8 @@ const ChatPage = () => {
                     </div>
                 )}
             </div>
-            <Chat character={character} />
+            <Chat character={character} className="fixed bottom-0 left-0 w-full md:relative md:bottom-auto md:left-auto md:w-auto md:h-auto md:flex-grow" />
         </div>
-
     );
 };
 
