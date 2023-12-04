@@ -7,22 +7,21 @@ const characters = [
     { id: 'timmy', name: 'Timmy', image: '/assets/Timmy.png' },
 ];
 
-console.log(characters)
 
 const CharacterSelection = ({ selectedCharacter, onSelectCharacter }) => {
     return (
-        <div className="flex space-x-4">
+        <div className="flex space-x-4 justify-center items-center">
             {characters.map((character) => (
                 <button
                     key={character.id}
                     className={`${selectedCharacter === character.id ? 'bg-blue-500 text-white' : 'bg-gray-300'
-                        } px-4 py-2 rounded focus:outline-none flex items-center`}
+                        } px-4 py-2 rounded focus:outline-none flex flex-col items-center`}
                     onClick={() => onSelectCharacter(character.id)}
                 >
                     <img
                         src={character.image}
                         alt={character.name}
-                        className="w-8 h-8 mr-2 rounded-full"
+                        className="w-20 h-20 mb-2 rounded-full"
                     />
                     {character.name}
                 </button>
