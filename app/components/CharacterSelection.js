@@ -5,6 +5,7 @@ export const characters = [
     { id: 'chewbacca', name: 'Chewbacca', image: '/assets/Chewy.png' },
     { id: 'murloc', name: 'Murloc', image: '/assets/Murloc.png' },
     { id: 'timmy', name: 'Timmy', image: '/assets/Timmy.png' },
+    { id: 'r2d2', name: 'R2-D2', image: '/assets/R2D2.png' },
 ];
 
 const CharacterSelection = ({ onSelectCharacter, onValidation }) => {
@@ -32,7 +33,7 @@ const CharacterSelection = ({ onSelectCharacter, onValidation }) => {
                         <img
                             src={character.image}
                             alt={character.name}
-                            className="w-20 h-20 mb-2 rounded-full"
+                            className="w-20 h-20 mb-2"
                         />
                         {character.name}
                     </button>

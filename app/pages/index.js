@@ -17,7 +17,7 @@ const Home = () => {
   };
 
   return (
-    <div className="container mx-auto  my-8 text-center">
+    <div className="container flex flex-col mx-auto text-center h-screen justify-center">
       <h1 className="text-4xl font-bold mb-4">Sélectionnez votre personnage :</h1>
       <CharacterSelection onSelectCharacter={handleCharacterSelect} onValidation={handleValidation} />
     </div>
