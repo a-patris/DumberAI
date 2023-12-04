@@ -12,6 +12,7 @@ const getRandomResponse = (character) => {
         murloc: ['Glllglllgl!', 'Mrglglglg!', 'Mrrglllgl!'],
         timmy: ['Timmy!', 'TIMMY!', 'Timmyyyyyyy!!!!'],
         r2d2: ['Beep boop beep!', 'Bleep bloop!', 'Bleeep beeep boop!'],
+        pikachu: ['Pikachu!', 'Pika Pika', 'Piiiii-Kaaaaaa-Chuuuuuuu !!!!']
     };
 
     const audioByCharacter = {
@@ -20,6 +21,7 @@ const getRandomResponse = (character) => {
         murloc: '/assets/murloc.mp3',
         timmy: '/assets/timmy.mp3',
         r2d2: '/assets/R2D2.mp3',
+        pikachu: '/assets/pikachu.mp3',
     };
 
     const responses = responsesByCharacter[character] || [];

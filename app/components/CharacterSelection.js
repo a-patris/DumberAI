@@ -6,6 +6,7 @@ export const characters = [
     { id: 'murloc', name: 'Murloc', image: '/assets/murloc.png', audio: '/assets/murloc.mp3' },
     { id: 'timmy', name: 'Timmy', image: '/assets/timmy.png', audio: '/assets/timmy.mp3' },
     { id: 'r2d2', name: 'R2-D2', image: '/assets/r2d2.png', audio: '/assets/R2D2.mp3' },
+    { id: 'pikachu', name: 'Pikachu', image: '/assets/pikachu.png', audio: '/assets/pikachu.mp3' },
 
 ];
 
