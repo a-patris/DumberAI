@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 export const characters = [
-    { id: 'groot', name: 'Groot', image: '/assets/Groot.png' },
-    { id: 'chewbacca', name: 'Chewbacca', image: '/assets/Chewy.png' },
-    { id: 'murloc', name: 'Murloc', image: '/assets/Murloc.png' },
-    { id: 'timmy', name: 'Timmy', image: '/assets/Timmy.png' },
-    { id: 'r2d2', name: 'R2-D2', image: '/assets/R2D2.png' },
+    { id: 'groot', name: 'Groot', image: '/assets/Groot.png', audio: '/assets/groot.mp3' },
+    { id: 'chewbacca', name: 'Chewbacca', image: '/assets/Chewy.png', audio: '/assets/chewy.mp3' },
+    { id: 'murloc', name: 'Murloc', image: '/assets/Murloc.png', audio: '/assets/murloc.mp3' },
+    { id: 'timmy', name: 'Timmy', image: '/assets/Timmy.png', audio: '/assets/timmy.mp3' },
+    { id: 'r2d2', name: 'R2-D2', image: '/assets/R2D2.png', audio: '/assets/R2D2.mp3' },
 ];
 
 const CharacterSelection = ({ onSelectCharacter, onValidation }) => {
@@ -18,6 +18,8 @@ const CharacterSelection = ({ onSelectCharacter, onValidation }) => {
 
     const handleValidation = () => {
         onValidation(selectedCharacter);
+        const selectedCharacterObject = characters.find((character) => character.id === selectedCharacter);
+       
     };
 
     return (

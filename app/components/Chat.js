@@ -14,30 +14,41 @@ const getRandomResponse = (character) => {
         r2d2: ['Beep boop beep!', 'Bleep bloop!', 'Bleeep beeep boop!'],
     };
 
+    const audioByCharacter = {
+        groot: '/assets/groot.mp3',
+        chewbacca: '/assets/chewy.mp3',
+        murloc: '/assets/murloc.mp3',
+        timmy: '/assets/timmy.mp3',
+        r2d2: '/assets/R2D2.mp3',
+    };
+
     const responses = responsesByCharacter[character] || [];
     const randomIndex = Math.floor(Math.random() * responses.length);
-    return responses[randomIndex];
+    return { response: responses[randomIndex], audio: audioByCharacter[character] };
 };
 
-
-const Chat = ({ character }) => {
+const Chat = ({ character, onValidation }) => {
     const [messages, setMessages] = useState([]);
+    const [loading, setLoading] = useState(false);
 
     const addMessage = (content, isUser = false) => {
         setMessages((prevMessages) => [...prevMessages, { content, isUser }]);
     };
 
-    const [loading, setLoading] = useState(false);
-
     const simulateResponse = (userMessage) => {
         setLoading(true);
 
-        const response = getRandomResponse(character);
+        const { response, audio } = getRandomResponse(character);
         const delay = Math.min(1000 + userMessage.length * 50, 5000);
 
         setTimeout(() => {
             addMessage(response);
             setLoading(false);
+
+            setTimeout(() => {
+                const audioElement = new Audio(audio);
+                audioElement.play();
+            }, 2000);
         }, delay);
     };
 
