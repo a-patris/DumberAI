@@ -44,11 +44,9 @@ const Chat = ({ character, onValidation }) => {
         setTimeout(() => {
             addMessage(response);
             setLoading(false);
-
-            setTimeout(() => {
-                const audioElement = new Audio(audio);
-                audioElement.play();
-            }, 2000);
+            const audioElement = new Audio(audio);
+            audioElement.play();
+            ;
         }, delay);
     };
 
