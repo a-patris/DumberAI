@@ -1,23 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 import CharacterSelection from '../components/CharacterSelection';
-
+import { useRouter } from 'next/router';
+import { characters } from '../components/CharacterSelection';
 const Home = () => {
-  const [selectedCharacter, setSelectedCharacter] = useState(null);
+  const router = useRouter();
 
-  const handleSelectCharacter = (characterId) => {
-    setSelectedCharacter(characterId);
+  const handleCharacterSelect = (characterId) => {
+    const selectedCharacter = characters.find((character) => character.id === characterId);
+    console.log(`J'ai choisi ${selectedCharacter.name} `);
+  };
+
+  const handleValidation = (selectedCharacter) => {
+    if (selectedCharacter) {
+      router.push(`/chatPage?character=${selectedCharacter}`);
+    }
   };
 
   return (
     <div className="container mx-auto my-8 text-center">
       <h1 className="text-4xl font-bold mb-4">Sélectionnez votre personnage :</h1>
-      <CharacterSelection
-        selectedCharacter={selectedCharacter}
-        onSelectCharacter={handleSelectCharacter}
-      />
-      {selectedCharacter && (
-        <p className="mt-4">Personnage sélectionné : {selectedCharacter}</p>
-      )}
+      <CharacterSelection onSelectCharacter={handleCharacterSelect} onValidation={handleValidation} />
     </div>
   );
 };
