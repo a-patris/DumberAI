@@ -31,8 +31,8 @@ const CharacterSelection = ({ onSelectCharacter, onValidation }) => {
                     <button
                         key={character.id}
                         className={`${selectedCharacter === character.id
-                                ? 'bg-blue-500 text-white'
-                                : 'bg-gray-300 hover:bg-blue-500 hover:text-white'
+                            ? 'bg-blue-500 text-white'
+                            : 'bg-gray-300 hover:bg-blue-500 hover:text-white'
                             } px-4 py-2 rounded focus:outline-none flex flex-col items-center mb-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6`}
                         onClick={() => handleSelectCharacter(character.id)}
                     >
@@ -44,6 +44,20 @@ const CharacterSelection = ({ onSelectCharacter, onValidation }) => {
                         {character.name}
                     </button>
                 ))}
+                <button
+                    className={`${selectedCharacter
+                        ? 'bg-blue-500 text-white'
+                        : 'bg-gray-300 hover:bg-blue-500 hover:text-white'
+                        } px-4 py-2 rounded focus:outline-none flex flex-col items-center mb-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6`}
+                    onClick={() => handleSelectCharacter()}
+                >
+                    <img
+                        src='/assets/images/random.png'
+                        alt='Random character'
+                        className="w-12 h-20 object-cover mb-2 sm:h-20"
+                    />
+                    Le conseil ultime
+                </button>
             </div>
             <button
                 className="bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded cursor-pointer"
